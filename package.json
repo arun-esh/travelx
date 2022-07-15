@@ -1,0 +1,29 @@
+{
+  "name": "comp3340project",
+  "version": "1.0.0",
+  "description": "Group Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arun-esh/comp3340Project.git"
+  },
+  "author": "Arunesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arun-esh/comp3340Project/issues"
+  },
+  "homepage": "https://github.com/arun-esh/comp3340Project#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^5.13.14",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "slugify": "^1.6.5",
+    "validator": "^13.7.0"
+  }
+}
