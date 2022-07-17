@@ -1,87 +1,36 @@
 extends base
 
 block content
-  main.main
-    .flex-container.wrap    
+  main.main-area
+    .card__container
       each product in products
-        .flex-item
-          .card__header
-            .card__picture
-              .card__picture-overlay &nbsp;
-              img.card__picture-img(src=`/${products.images}`, alt=`${product.name}`)
-            h3.heading-tertirary
-              span= product.name
-
-
-          .card__details
-            h4.card__sub-heading=  products.description + "HI"
-            p.card__text= `${product.description}`
-            .card__data
-              svg.card__icon
-                use(xlink:href='/img/icons.svg#icon-map-pin')
-              span= product.description
-            .card__data
-              svg.card__icon
-                use(xlink:href='/img/icons.svg#icon-calendar')
-              span= "startdate"
-            .card__data
-              svg.card__icon
-                use(xlink:href='/img/icons.svg#icon-flag')
-              span= ` stops`
-            .card__data
-              svg.card__icon
-                use(xlink:href='/img/icons.svg#icon-user')
-              span= "popular"
-
-          .card__footer
-            p
-              span.card__footer-value= `price`
-              | 
-              span.card__footer-text per person
-            p.card__ratings
-              span.card__footer-value= product.cleaning
-              | 
-              span.card__footer-text= 'rating'
-            a.btn.btn--green.btn--small(href=`/product/${product.slug}`) Details
-
-
-
-      //- each product in products
-      //-   .card
-      //-     .card__header
-      //-       .card__picture
-      //-         .card__picture-overlay &nbsp;
-      //-         img.card__picture-img(src=`/img/products/${product.imageCover}`, alt=`${product.name}`)
-      //-       h3.heading-tertirary
-      //-         span= product.name
-
-          //- .card__details
-          //-   h4.card__sub-heading= `${product.difficulty} ${product.duration}-day product`
-          //-   p.card__text= product.summary
-          //-   .card__data
-          //-     svg.card__icon
-          //-       use(xlink:href='/img/icons.svg#icon-map-pin')
-          //-     span= product.startLocation.description
-          //-   .card__data
-          //-     svg.card__icon
-          //-       use(xlink:href='/img/icons.svg#icon-calendar')
-          //-     span= product.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric'})
-          //-   .card__data
-          //-     svg.card__icon
-          //-       use(xlink:href='/img/icons.svg#icon-flag')
-          //-     span= `${product.locations.length} stops`
-          //-   .card__data
-          //-     svg.card__icon
-          //-       use(xlink:href='/img/icons.svg#icon-user')
-          //-     span= `${product.maxGroupSize} people`
-
-          //- .card__footer
-          //-   p
-          //-     span.card__footer-value= `$${product.price}`
-          //-     | 
-          //-     span.card__footer-text per person
-          //-   p.card__ratings
-          //-     span.card__footer-value= product.ratingsAverage
-          //-     | 
-          //-     span.card__footer-text= `rating (${product.ratingsQuantity})`
-          //-   a.btn.btn--green.btn--small(href=`/product/${product.slug}`) Details
+        .card__container_item
+          .card_inner
+            .card__container_item_img
+              img(src=`${product.images.picture_url}`, alt=`${product.name}`)
+            .card__container_item_description
+              .card_title
+                h3
+                  span= product.name
+              .card_info
+                .card_info_item
+                  p= product.description
+              
+              .card-footer
+                .features
+                  .stat
+                    span.label Bedrooms
+                    span.value= `${product.bedrooms}`
+                  .stat
+                    span.label Bath
+                    span.value= `${product.bathrooms}`
+                  .stat
+                    span.label Price
+                    span.value= `$${product.price}`
+                .cart
+                  .add-to-cart
+                    a.btn1(href='#')
+                      span
+                        i.fas.fa-shopping-cart
+                      span
+                        | Add to cart

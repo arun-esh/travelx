@@ -31,6 +31,9 @@
   column-gap: 2rem;
 }
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 .wrap {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -77,3 +80,11 @@
 .heading-tertirary {
     margin-bottom: 1rem;
 }
+
+
+
+
+
+
+
+
