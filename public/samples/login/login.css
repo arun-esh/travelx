@@ -1,0 +1,57 @@
+body {
+  background-color: white;
+  font-family: "Roboto Mono", monospace;
+}
+.box {
+  padding: 163px 0;
+  margin: 0 auto;
+  width: 680px;
+  color: White;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+button {
+  width: 30%;
+}
+.b1 {
+  background-color: #0073b1;
+}
+button:hover {
+  opacity: 0.7;
+}
+h1 {
+  font: revert;
+  color: black;
+}
+span {
+  width: 2px;
+}
+input {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+label {
+  width: 100px;
+}
+input {
+  border: 2px solid #606060;
+}
+footer {
+  border-top: 2px solid black;
+  text-align: center;
+}
+footer a {
+  padding: 15px;
+  display: inline-block;
+}
+.cl {
+  list-style: none;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+:hover {
+  text-decoration: none;
+}
