@@ -14,12 +14,14 @@ body {
 }
 
 .main-area {
-  background-color: #f9f4f4;
+  /* background-color: #f9f4f4; */
+  background-color: white;
   padding-top: 3rem;
+  margin: 20px;
 }
 
 .card_info {
-  max-width: 400px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .card_info_item {
@@ -139,14 +141,21 @@ img {
 }
 
 .add-to-cart {
-  background: #55c57a;
-  color: #fff;
-  padding: 10px;
+  background: #77bd4c;
+  padding: 1rem;
   border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 1px;
-  display: inline-block;
   margin-top: 10px;
+}
+
+.add-to-cart span {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.add-to-cart a {
+  text-decoration: none;
+
 }
