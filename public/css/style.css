@@ -99,21 +99,20 @@ body {
   background-repeat:no-repeat;
   background-position: center;
   opacity: 10; */
-  
 }
 
 .footer li {
-    list-style: none;
-    font-size: 1.5rem;
-    line-height: 3rem;
+  list-style: none;
+  font-size: 1.5rem;
+  line-height: 3rem;
 }
 
 .footer h3 {
   text-underline-offset: 12rem;
   display: inline-block;
-    border-bottom-width: 4px;
-    border-bottom-style: solid;
-    border-bottom-color: yellow;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: yellow;
 }
 
 .myfooter {
@@ -126,6 +125,102 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  letter-spacing: .6rem;
+  letter-spacing: 0.6rem;
   font-weight: 500;
 }
+
+.main-detail-page {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin : 2rem;
+}
+
+/* Detailed Page */
+.detail-page-top-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.detail-page-top-box-img img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.myLogo {
+  background-image: url(../img/logo_transparent.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.8;
+  flex-wrap: wrap;
+  width: 22rem;
+  height: auto;
+  padding: 2rem;
+  margin: 0 auto;
+  /* margin-bottom: 5rem; */
+}
+
+.detail-page-top-box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.detail-page-top-box-text h1 {
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.4rem;
+}
+
+.detail-page-top-box-text p {
+  width: 600px;
+  padding-top:5px;
+  border-width:1px;
+  padding-left:3px;
+  padding-bottom:10px;
+  word-wrap: break-word;
+  letter-spacing: .1rem;
+  font: 1.4em sans-serif;
+}
+
+.detail-page-top-box-text hr {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #555;
+  margin: 0 auto;
+}
+
+.product-detail-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+  padding: 4rem;
+  margin: 0 auto;
+}
+
+.product-detail-description {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+  padding: 4rem;
+  margin: 0 auto;
+}
+
+
+
+.product-detail-description p {
+  font-size: 2.5rem;
+}
+
+
