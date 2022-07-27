@@ -1,0 +1,179 @@
+/*header general css goes here */
+.detailed_page_main
+{
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+.detailed_page_main img
+{
+    float: left;
+    height:450px;
+    width:800px;
+    margin-bottom: 50px;
+}
+main h1,h2
+{
+    text-align: center;
+}
+main iframe
+{
+    width:675px;
+    height:325px; 
+    border:0px;
+}
+.price_text_class
+{
+    display:grid;
+    grid-template-columns: 80% 20%;
+}
+.hotel_info
+{
+    text-decoration: wavy;
+    font-size: large;
+}
+.sticky_card
+{
+    height: max-content;
+    width:300px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    top:25px;
+    padding: 10px 2px;
+    font-size:18px;
+    position:sticky;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+.detailedpage_price
+{
+    font-size:26px;
+    margin-left:18px;
+}
+.datebox
+{
+    padding-left: 17px;
+    margin-top: 25px;
+    margin-left: 9px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    border-radius:12px;
+}
+.newbox_sp
+{
+    display:grid;
+    grid-template-columns: repeat(2,136px);
+    border: 1px solid black;
+    margin-top: 13px;
+    padding: initial;
+    margin-left: -10px;
+    margin-right: 7px;
+    border-radius: 7px;
+    margin-bottom: 17px;
+}
+.newbox
+{
+    border: 1px solid black;
+    margin-top: 13px;
+    padding: initial;
+    margin-left: -10px;
+    margin-right: 7px;
+    border-radius: 7px;
+    margin-bottom: 17px;
+}
+.dpage_sidebar
+{
+    display: inline;
+    margin-left:10px;
+    border-right: 1px solid black;
+}
+.nb_text
+{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.checkin_box
+{
+    padding:5px 5px;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    border:none;
+    margin-top:6px;
+}
+.formGrid
+{
+    display:grid;
+    gap:0.5rem;
+    margin-top: 15px;
+    grid-template-columns: 40% 60%;
+    margin-bottom:15px;
+}  
+.formGrid > label
+{
+    margin-left:20px;
+}
+.formGrid > select
+{
+    margin-right: 72px;
+    margin-left: 8px;
+}
+.datebox button 
+{
+    color: #ffffff;
+    background-color: #d72874;
+    font-size: 19px;
+    border: -3px solid #000000;
+    border-radius: 10px;
+    padding: 15px 90px;
+    cursor: pointer;
+    margin-top:20px;
+}
+.datebox button:hover 
+{
+    color: #d72874;
+    background-color: #ffffff;
+}
+.dpage_box
+{
+    
+    text-align: center;
+    margin-top:20px;
+    padding:20px 20px;   
+}
+.dpage_border
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom:1px solid grey;
+}
+.price_text_class h1 span
+{
+    color:#d72874;
+}
+.price_text_class h1
+{
+    display: inline;
+}
+.sc_price
+{
+    display:grid;
+    grid-template-columns: repeat(2,136px);
+}
+.dpage_border_sp
+{
+    display : grid;
+    grid-template-columns: repeat(autofit,minmax(6,185px));
+    padding-top:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid grey;
+}
+.rowspan-2
+{
+    grid-column: 1/7;
+    font-weight: 600;
+    font-size:26px;
+}
+.dpage_box span
+{
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 2;
+}
