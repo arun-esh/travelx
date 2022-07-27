@@ -29,8 +29,9 @@ block content
                     span.value= `$${product.price}`
                 .cart
                   .add-to-cart
-                    a.btn1(href='#')
+                    a.btn1(href=`/product/${product.slug}`)
                       span
-                        i.fas.fa-shopping-cart
-                      span
+                        <ion-icon name="cart-outline"></ion-icon>
+                      span  
                         | Details
+                        
