@@ -4,13 +4,22 @@ block content
     .main-detail-page
         .detail-page-top-box
             .detail-page-top-box-img
-                img(src=`${product.images.picture_url}`, alt=`${product.name}`)
+                img(src=product.images.picture_url, alt=product.name)
             .detail-page-top-box-text
                 .myLogo
                 h1
                     span=product.name
+                    
                 hr
     .product-detail-info
         .product-detail-description
             h2 Description
             p=product.description
+            p=product.address.location.coordinates
+            p=product.amenities
+    .card-footer
+        .cart
+            each item in product.amenities
+                .add-to-cart
+                    a.btn1(href=`/product/${product.slug}`)
+                        span=item

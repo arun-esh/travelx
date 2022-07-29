@@ -11,14 +11,15 @@ exports.getOverview = catchAsync(async (req, res) => {
   });
 });
 
-exports.getProduct = catchAsync(async (req, res) => {
+exports.getProduct = catchAsync(async (req, res, next) => {
 
   const product = await Product.findOne({ slug: req.params.slug }).populate({
     path: 'reviews',
     fields: 'review rating user'
   });
   res.status(200).render('product', {
-    title: 'place holder product',
-    product
+    title: 'Product',
+    product 
+    
   });
 });
