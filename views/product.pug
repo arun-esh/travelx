@@ -4,21 +4,73 @@ block content
     .main-detail-page
         .detail-page-top-box
             .detail-page-top-box-img
-                img(src=product.images.picture_url, alt=product.name)
+                img(src=product.images.picture_url alt=product.name)
             .detail-page-top-box-text
-                .myLogo
-                h1
-                    span=product.name
-                hr
-    .product-detail-info
-        .product-detail-description
+                .detail-page-product-name
+                    h1=product.name
+                    .product-list
+                        ul
+                            li
+                                span=product.accommodates
+                                span &nbsp;
+                                span guests
+                            li
+                                span |
+                            li
+                                span=product.bedrooms
+                                span &nbsp;
+                                span bedrooms
+                            li
+                                span |
+                            li
+                                span=product.bathrooms
+                                span &nbsp;
+                                span bathrooms
+                            li
+                                span |
+                            li
+                                span=product.beds
+                                span &nbsp;
+                                span beds
+                    hr
+                .product-featured-offers
+                    .product-list-offer
+                        ul.feature-lists
+                            li
+                                ion-icon.product-header-icons(name='pricetags-outline')
+                                span=`$${product.price}`
+                                p We offer lowest price for our customers
+                            li
+                                ion-icon.product-header-icons(name='home-outline')
+                                span=product.property_type
+                                p What is the type of your booking
+                            li
+                                ion-icon.product-header-icons(name='bag-outline')
+                                span=product.security_deposit
+                                p
+                                    | Some Requires 
+                                    strong
+                                        | Security deposit
+                                    span &nbsp;
+                                    | before check in
+                            li
+                                ion-icon.product-header-icons(name='water-outline')
+                                span=product.cleaning_fee
+                                p
+                                    | Requires the cleaning fee
+                            
+        .product-detail-info
             h2 Description
-            p=product.description
-            p=product.address.location.coordinates
-            p=product.amenities
-    .card-footer
-        .cart
-            each item in product.amenities
-                .add-to-cart
-                    a.btn1(href=`/product/${product.slug}`)
-                        span=item
+            .product-detail-description
+            p
+                | Newly appointed space sitting at the edge of the 900-foot Waipio cliffside, mere paces from the
+                | Waipi&apos;o lookout. The modern amenities include a large walk-in closet, kitchenette, four-post teak
+                | queen bed, 200 sq ft private deck (peek-a-boo ocean views), walk-in natural stone-tiled shower,
+                | granite counters, toaster, coffeemaker, smart TV, propane BBQ, small fridge, hot plate, and
+                | housewares. The suite has two private entrances and sits on an acre of lush property. You&apos;ll feel
+                | right at home here! The guest suite, or Ohana, is located on an acre of property covered in lush
+                | flora (much of which is edible). The views from our cliff edge are one of a kind. The valley, sky,
+                | ocean, views of Maui are ever-changing. The reviews give you an idea of what it has to offer. We are
+                | very into sustainability- the house runs on a fraction of the energy it generates via solar, and we
+                | work toward living off the land. Being avid travelers ourselves, we are happy to share some local
+                | advice and tips with you

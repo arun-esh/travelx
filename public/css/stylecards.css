@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #ffffff;
+  background-color: hwb(0deg 98% 5%);
   color: #555555;
   font-size: 14px;
 }
