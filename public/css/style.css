@@ -215,7 +215,7 @@ hr {
 
 .feature-lists span{
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .feature-lists li p{
@@ -228,7 +228,7 @@ hr {
 
 .product-header-icons {
   list-style: none;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 400;
   color: red;
   margin-right: 2rem;
