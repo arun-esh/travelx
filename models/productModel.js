@@ -6,8 +6,8 @@ const productSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      trim: true,
       unique: true,
+      trim: true,
       required: true,
     },
     slug: String,
@@ -28,10 +28,19 @@ const productSchema = new mongoose.Schema(
     },
     notes: {
       type: String,
-      trim: true,
       required: true,
     },
     transit: {
+      type: String,
+      trim: true,
+      required: true,
+    },
+    access: {
+      type: String,
+      trim: true,
+      required: true,
+    },
+    house_rules: {
       type: String,
       trim: true,
       required: true,
@@ -75,6 +84,12 @@ const productSchema = new mongoose.Schema(
       type: String,
       trim: true,
       required: true,
+      // check if number of reviews are greater than 0
+      // validate: {
+      //   validator: function(v) {
+      //     return v > 0;
+      //   }
+      // },
     },
     bathrooms: {
       type: mongoose.Types.Decimal128,
@@ -92,6 +107,11 @@ const productSchema = new mongoose.Schema(
     },
     cleaning_fee: {
       type: mongoose.Types.Decimal128,
+      required: true,
+    },
+    security_deposit: {
+      type: mongoose.Types.Decimal128,
+      required: true,
     },
     images: {
       picture_url: {
@@ -100,22 +120,107 @@ const productSchema = new mongoose.Schema(
       },
     },
 
-    // review_score: {
-    //   review_scores_value: {
-    //     type: String,
-    //     required: true,
-    //   },
-    //   review_scores_rating: {
-    //     type: String,
-    //     required: true,
-    //   },
-    // },
-    // reviews: {
-    //   type: Array,
-    //   friends: [{type: ObjectId}],
-    //   required: true,
+    address: {
+      location: {
+        coordinates: {
+          type: [Number],
+        },
+      },
+      street: {
+        type: String,
+        required: true,
+      },
+      country: {
+        type: String,
+        required: true,
+      },
+    },
 
-    // },
+    // // HOST INFORMATION
+    host: {
+      host_id: {
+        type: String,
+        required: true,
+      },
+      host_name: {
+        type: String,
+        required: true,
+      },
+      host_about: {
+        type: String,
+        required: true,
+      },
+      host_location: {
+        type: String,
+        required: true,
+      },
+      host_response_rate: {
+        type: Number,
+        required: true,
+      },
+
+      host_listings_count: {
+        type: String,
+        required: true,
+      },
+      host_total_listings_count: {
+        type: String,
+        required: true,
+      },
+      host_verifications: {
+        type: Array,
+        default: [],
+        required: true,
+      },
+    },
+
+    // // RevIEWS INFORMATION
+
+    review_scores: {
+      type: Object,
+      review_scores_accuracy: {
+        type: Number,
+        trim: true,
+        required: true,
+      },
+      review_scores_cleanliness: {
+        type: Number,
+        required: true,
+      },
+      review_scores_checkin: {
+        type: Number,
+        required: true,
+      },
+      review_scores_communication: {
+        type: Number,
+        required: true,
+      },
+      review_scores_location: {
+        type: Number,
+        required: true,
+      },
+      review_scores_value: {
+        type: Number,
+        required: true,
+      },
+      review_scores_rating: {
+        type: Number,
+        required: true,
+      },
+    },
+
+    reviews: [
+      {
+        reviewer_name: {
+          type: String,
+          required: true,
+        },
+        comments: {
+          type: String,
+          required: true,
+        },
+      },
+    ],
   },
 
   {
@@ -128,7 +233,7 @@ const productSchema = new mongoose.Schema(
 //   return this.duration / 7;
 // });
 
-// DOCUMENT MIDDLEWARE: runs before .save() and .create()
+// // DOCUMENT MIDDLEWARE: runs before .save() and .create()
 productSchema.pre('save', function (next) {
   this.slug = slugify(this.name, { lower: true, trim: true });
   next();
@@ -141,6 +246,8 @@ productSchema.pre('save', function (next) {
   }
   next();
 });
+
+
 
 
 // productSchema.pre('save', function(next) {
