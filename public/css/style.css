@@ -132,24 +132,38 @@ body {
 .main-detail-page {
   display: flex;
   flex-direction: column;
-  padding: 9rem;
-  margin : 8rem;
+  padding: 3rem;
+  margin: 4rem;
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.detail-page-top-box {
+/* .detail-page-top-box {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 1.5rem;
+} */
+
+.detail-page-top-box {
+  display: flex;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: space-around;
+  align-items: center;
+  flex: 0 1 auto 
+
 }
 
-
 .detail-page-top-box-img img {
-  width: 100%;
-  height: 55rem;
+  /* width: 60rem; */
+  min-width: 30rem;
+  height: auto;
 }
 
 .detail-page-product-name {
@@ -163,7 +177,7 @@ body {
   align-items: left;
 }
 
-.product-list ul{
+.product-list ul {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
@@ -182,7 +196,7 @@ body {
   align-items: left;
 }
 
-.product-list-offer{
+.product-list-offer {
   display: flex;
   flex-direction: row;
   gap: 3.5rem;
@@ -209,22 +223,20 @@ hr {
   margin-bottom: 1.5rem;
 }
 
-.feature-lists li{
+.feature-lists li {
   margin-bottom: 3rem;
 }
 
-.feature-lists span{
+.feature-lists span {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
 
-.feature-lists li p{
+.feature-lists li p {
   margin-top: 1rem;
   color: rgb(117, 112, 112);
   font-size: 1.7rem;
 }
-
-
 
 .product-header-icons {
   list-style: none;
@@ -233,7 +245,6 @@ hr {
   color: red;
   margin-right: 2rem;
 }
-
 
 .detail-page-product-name h1 {
   font-size: 4rem;
@@ -246,7 +257,6 @@ hr {
   font-weight: 400;
   color: #555;
 }
-
 
 .product-detail-info {
   display: flex;
@@ -268,10 +278,41 @@ hr {
   margin: 0 auto;
 }
 
-
-
 .product-detail-description p {
   font-size: 2.5rem;
 }
 
+/* Review  start */
 
+.main-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 40px 0px;
+}
+
+.title h2 {
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.title .underline {
+  width: 100px;
+  height: 4px;
+  background-color: #77bd4c;
+  margin: 0 auto;
+}
+
+/* Review  end */
