@@ -1,4 +1,6 @@
 extends base
+include _reviewCard
+include _descriptionCard
 
 block content 
     .main-detail-page
@@ -74,3 +76,25 @@ block content
                 | very into sustainability- the house runs on a fraction of the energy it generates via solar, and we
                 | work toward living off the land. Being avid travelers ourselves, we are happy to share some local
                 | advice and tips with you
+
+
+       
+        if product.number_of_reviews > 0
+            .main-review
+                section.container
+                    .title
+                        h2 reviews
+                        .underline
+                    
+            +reviewCard(review)
+            
+        else
+            .main-review
+                section.container
+                    .title
+                        h2
+                            | No reviews yet
+                        p
+                        
+                            | Be the first to review this place
+                           
