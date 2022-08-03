@@ -1,0 +1,12 @@
+mixin reviewCard(review)
+    .card__container
+        each item in product.reviews
+            .card__container_item
+                .card_inner
+                    .card__container_item_description
+                        .card_title
+                            h3
+                                span= item.reviewer_name
+                        .card_info
+                            .card_info_item
+                                p= item.comments

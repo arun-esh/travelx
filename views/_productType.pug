@@ -1,0 +1,29 @@
+mixin productType()
+    br
+    br
+    .card__container_item
+        .card_inner
+            .card__container_item_description
+                .card_title
+                    h3
+                        span="Property Info"
+                .card_info
+                    .card_info_item
+                        p 
+                            strong Property Type: 
+                            span=product.property_type
+
+                    .card_info_item
+                        p 
+                            strong Room Type: 
+                            span=product.room_type  
+
+                    .card_info_item
+                        p 
+                            strong Bed Type: 
+                            span=product.bed_type    
+                    .card_info_item
+                        p 
+                            strong House Rules: 
+                            span=product.house_rules    
+                    

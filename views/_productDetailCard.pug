@@ -1,0 +1,39 @@
+mixin productDetailCard()
+    br
+    br
+    .card__container_item
+        .card_inner
+            .card__container_item_description
+                .card_title
+                    h3
+                        span="Other Information"
+                .card_info
+                    .card_info_item
+                        p 
+                            strong Property Type:: 
+                            span=product.property_type
+
+                    .card_info_item
+                        p 
+                            strong Room Type: 
+                            span=product.room_type  
+
+                    .card_info_item
+                        p 
+                            strong Bed Type: 
+                            span=product.bed_type
+
+                    .card_info_item
+                        p 
+                            strong Cancellation Policy: 
+                            span=product.cancellation_policy 
+
+                    .card_info_item
+                        p 
+                            strong Security Deposit:
+                            span=product.security_deposit
+
+                    .card_info_item
+                        p 
+                            strong Cleaning fee:
+                            span=product.cleaning_fee           

@@ -1,16 +1,117 @@
 extends base
+include _reviewCard
+include _textWording
+include _amenities
+include _hostInfo
+include _hostTransit
+include _productType
+include _productFee
 
 block content 
     .main-detail-page
+        .floating-box
+            .cart
+                .add-to-cart
+                    a.btn1(href=`/product/${product.slug}`)
+                      span
+                        <ion-icon name="cart-outline"></ion-icon>
+                      span  
+                        | Buy
         .detail-page-top-box
             .detail-page-top-box-img
-                img(src=`${product.images.picture_url}`, alt=`${product.name}`)
+                img(src=product.images.picture_url alt=product.name)
             .detail-page-top-box-text
-                .myLogo
-                h1
-                    span=product.name
-                hr
-    .product-detail-info
-        .product-detail-description
-            h2 Description
-            p=product.description
+                .detail-page-product-name
+                    h1=product.name
+                    .product-list
+                        ul
+                            li
+                                span=product.accommodates
+                                span &nbsp;
+                                span guests
+                            li
+                                span |
+                            li
+                                span=product.bedrooms
+                                span &nbsp;
+                                span bedrooms
+                            li
+                                span |
+                            li
+                                span=product.bathrooms
+                                span &nbsp;
+                                span bathrooms
+                            li
+                                span |
+                            li
+                                span=product.beds
+                                span &nbsp;
+                                span beds
+                    hr
+                .product-featured-offers
+                    .product-list-offer
+                        ul.feature-lists
+                            li
+                                ion-icon.product-header-icons(name='pricetags-outline')
+                                span=`$${product.price}`
+                                p We offer lowest price for our customers
+                            li
+                                ion-icon.product-header-icons(name='home-outline')
+                                span=product.property_type
+                                p What is the type of your booking
+                            li
+                                ion-icon.product-header-icons(name='bag-outline')
+                                span=product.security_deposit
+                                p
+                                    | Some Requires 
+                                    strong
+                                        | Security deposit
+                                    span &nbsp;
+                                    | before check in
+                            li
+                                ion-icon.product-header-icons(name='water-outline')
+                                span=product.cleaning_fee
+                                p
+                                    | Requires the cleaning fee
+
+        +textWording("Description", product.description)                    
+        +textWording("Summary", product.summary)
+        +textWording("Amenities")
+        .card_info_item
+            p= "Number of amenties included: " + product.amenities.length
+
+        +amenities(product.amenities)
+        +textWording("Neighborhood Overview", product.neighborhood_overview)
+        
+        main.main-area
+            .card__container
+                +hostInfo(product.host)
+                +productType()
+                +productFee()
+        main.main-area
+            .card__container
+                +hostTransit("Transit", product.transit)
+                +hostTransit("Notes", product.notes)
+                +hostTransit("Access", product.access)
+                
+
+        +textWording("Map", "Coming soon")
+        if product.number_of_reviews > 0
+            .main-review
+                section.container
+                    .title
+                        h2 reviews
+                        .underline
+                    
+            +reviewCard(review)
+            
+        else
+            .main-review
+                section.container
+                    .title
+                        h2
+                            | No reviews yet
+                        p
+                        
+                            | Be the first to review this place
+                           
