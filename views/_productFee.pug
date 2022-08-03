@@ -1,0 +1,32 @@
+mixin productFee()
+    br
+    br
+    .card__container_item
+        .card_inner
+            .card__container_item_description
+                .card_title
+                    h3
+                        span="Other"
+                .card_info
+                    .card_info_item
+                        p 
+                            strong Price: 
+                            span=product.price
+                        p 
+                            strong Cancellation Policy: 
+                            span=product.cancellation_policy 
+
+                    .card_info_item
+                        p 
+                            strong Security Deposit: 
+                            span=product.security_deposit
+
+                    .card_info_item
+                        p 
+                            strong Cleaning fee:       
+                            span= product.cleaning_fee      
+
+                    .card_info_item
+                        p 
+                            strong Number of Guests:    
+                            span=product.accommodates  

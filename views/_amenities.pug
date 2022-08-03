@@ -1,0 +1,10 @@
+mixin amenities(input)
+    main.main-area
+        .card__container
+            each item in input
+                .card__container_item
+                    .card_inner
+                        .card__container_item_description
+                            .card_title
+                                span= item
+                    
