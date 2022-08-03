@@ -9,6 +9,14 @@ include _productFee
 
 block content 
     .main-detail-page
+        .floating-box
+            .cart
+                .add-to-cart
+                    a.btn1(href=`/product/${product.slug}`)
+                      span
+                        <ion-icon name="cart-outline"></ion-icon>
+                      span  
+                        | Buy
         .detail-page-top-box
             .detail-page-top-box-img
                 img(src=product.images.picture_url alt=product.name)
