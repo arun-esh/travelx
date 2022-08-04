@@ -7,6 +7,12 @@ include _hostTransit
 include _productType
 include _productFee
 
+block append head   
+    script(src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js')
+    link(href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet')
+
+
+
 block content 
     .main-detail-page
         .floating-box
@@ -93,9 +99,11 @@ block content
                 +hostTransit("Transit", product.transit)
                 +hostTransit("Notes", product.notes)
                 +hostTransit("Access", product.access)
-                
+        
+        main.main-area
+            section.section-map
+                    #map(data-locations = product.address.location)
 
-        +textWording("Map", "Coming soon")
         if product.number_of_reviews > 0
             .main-review
                 section.container
