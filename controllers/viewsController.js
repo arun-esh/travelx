@@ -36,3 +36,9 @@ exports.getSignUpForm = (req, res) => {
     title: 'Log into your account'
   });
 };
+
+exports.getBillingPage = (req, res) => {
+  res.status(200).render('billing', {
+    title: 'Billing'
+  });
+}

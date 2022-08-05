@@ -1,0 +1,57 @@
+extends base
+
+block content
+  main.main-area 
+    .body-padding
+      .container-billing
+        form(action='')
+          .row
+            .col
+              h3.title billing address
+              .inputBox
+                span full name 
+                input(type='text' placeholder='john deo')
+              .inputBox
+                span email 
+                input(type='email' placeholder='example@example.com')
+              .inputBox
+                span address 
+                input(type='text' placeholder='room - street - locality')
+              //- .inputBox
+              //-   span country 
+              //-   input(type='text' placeholder='canada')
+              .inputBox
+                span city 
+                input(type='text' placeholder='windsor')
+              .flex
+                .inputBox
+                  span province 
+                  input(type='text' placeholder='Ontario')
+                .inputBox
+                  span postal code 
+                  input(type='text' placeholder='123 456')
+            .col
+              h3.title payment
+              
+              .inputBox
+                span name on card 
+                input(type='text' placeholder='mr. john deo')
+              .inputBox
+                span credit card number 
+                input(type='text' placeholder='1111-2222-3333-4444')
+              .inputBox
+                span exp month 
+                input(type='text' placeholder='january')
+              .flex
+                .inputBox
+                  span exp year 
+                  input(type='text' placeholder='2022')
+                .inputBox
+                  span CVV 
+                  input(type='text' placeholder='1234')
+
+              .inputBox
+                span cards accepted 
+                img(src='img/card_img.png' alt='')
+          input.submit-btn(type='submit' value='Complete the transaction')
+
