@@ -25,5 +25,11 @@ app.use('/', viewRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
 
+app.all(`*`, (req, res) => {
+  res.status(404).json({
+    status: `fail`,
+    message: `Page not found`,
+  });
+});
 
 module.exports = app;
