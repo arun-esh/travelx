@@ -12,16 +12,22 @@ exports.getOverview = catchAsync(async (req, res) => {
 });
 
 exports.getProduct = catchAsync(async (req, res, next) => {
+  console.log("REQUIRED: " + req.params.slug);
 
+  // const product = await Product.findOne({ slug: req.params.slug })
+  
   const product = await Product.findOne({ slug: req.params.slug }).populate({
     path: 'reviews',
     fields: 'review rating user'
   });
+  console.log(product);
   res.status(200).render('product', {
     title: 'Product',
     product 
 
   });
+
+  console.log(product);
 });
 
 exports.getLoginForm = (req, res) => {

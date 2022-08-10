@@ -18,7 +18,7 @@ block content
         .floating-box
             .cart
                 .add-to-cart
-                    a.btn1(href=`/billing`)
+                    a.btn1(href=`/product/${product.slug}`)
                       span
                         <ion-icon name="cart-outline"></ion-icon>
                       span  
@@ -122,4 +122,7 @@ block content
                         p
                         
                             | Be the first to review this place
+
+    script(src='/js/mapbox.js')
+    script(src='/script.js')
                            

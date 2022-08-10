@@ -247,6 +247,13 @@ productSchema.pre('save', function (next) {
   next();
 });
 
+// show only few random documents
+// productSchema.pre(/^find/, function (next) {
+//   this.find({ active: { $ne: false } });
+//   this.limit(16);
+//   this.skip(Math.floor(Math.random() * 6));
+//   next();
+// });
 
 
 
