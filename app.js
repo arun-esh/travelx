@@ -4,6 +4,7 @@ const morgan = require(`morgan`);
 const viewRouter = require(`./routes/viewsRoutes`);
 const globalErrorHandler = require(`./controllers/errorController`);
 const cookieParser = require(`cookie-parser`);
+const appError = require(`./utils/appError`);
 
 
 const app = express();
