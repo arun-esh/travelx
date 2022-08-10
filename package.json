@@ -6,10 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "play": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js",
-    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "start:prod": "NODE_ENV=production nodemon server.js"
   },
   "repository": {
     "type": "git",
