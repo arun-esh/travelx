@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,14 @@
   },
   "homepage": "https://github.com/arun-esh/comp3340Project#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "mongoose": "^5.13.14",
-    "mongoose-int32": "^0.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.1",
     "morgan": "^1.10.0",
+    "nodemailer": "^6.7.7",
     "pug": "^3.0.2",
     "slugify": "^1.6.5",
     "validator": "^13.7.0"

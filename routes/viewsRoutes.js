@@ -1,7 +1,10 @@
 const express = require(`express`);
 const viewsController = require(`./../controllers/viewsController`);
+const authController = require(`./../controllers/authController`);
 
 const router = express.Router();
+
+router.post('/login', authController.login);
 
 router.get('/', viewsController.getOverview);
 router.get('/product/:slug', viewsController.getProduct);

@@ -282,6 +282,8 @@ productSchema.pre('save', function (next) {
 //   next();
 // });
 
+// console.log(`🟢 🡒 \t productModel.js 🡒\tproductSchema `); 
+
 const Product = mongoose.model('product', productSchema);
 
 module.exports = Product;
