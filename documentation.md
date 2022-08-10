@@ -30,3 +30,21 @@ If there is anything passed as argument in `next()`, express will assume that th
 
 
 
+# Documentation
+
+
+
+Restrict routes so that only certain members can manipulate the stuff
+
+```jsx
+router
+  .route('/:id')
+  .get(tourController.getTour)
+  .patch(tourController.updateTour)
+  .delete(
+    authController.protect,
+    authController.restrictTo('admin', 'lead-guide'),
+    tourController.deleteTour
+  );
+```
+
