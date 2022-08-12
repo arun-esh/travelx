@@ -24,7 +24,7 @@ Click on the link to check the [Requirements](https://github.com/arun-esh/comp33
 
 ## About Travelx
 
-![Issues](https://img.shields.io/github/issues/arun-esh/comp3340Project)![Forks](https://img.shields.io/github/forks/arun-esh/comp3340Project)![Repo Size](https://img.shields.io/github/repo-size/arun-esh/comp3340Project)![RepoSize](https://img.shields.io/github/contributors/arun-esh/comp3340Project)
+![Issues](https://img.shields.io/github/issues/arun-esh/comp3340Project) ![Forks](https://img.shields.io/github/forks/arun-esh/comp3340Project) ![Repo Size](https://img.shields.io/github/repo-size/arun-esh/comp3340Project) ![Contributors](https://img.shields.io/github/contributors/arun-esh/comp3340Project)   
 
 Named out Project as **TRAVELX** which is vacation booking website and has locations all over the world. Travelx customer can book their stay as per their likings. 
 
