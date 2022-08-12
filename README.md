@@ -55,5 +55,30 @@ Dataset `sample_airbnb` has vocation home listings and their reviews. This datas
 
 
 
+### Tech we used
 
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![css](https://img.shields.io/badge/CSS3-1572B6?&style=for-the-badge&logo=css3&logoColor=white) ![javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)![Node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) ![saas](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![php](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) 
+
+![markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white) ![express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge) ![mongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+
+
+
+## How to install
+
+### For mac users
+
+* Go to [Nodejs.org](https://nodejs.org/en/)
+* Download the package
+
+![image-20220812005444133](img/image-20220812005444133.png)
+
+* Run the installer
+
+![image-20220812005625814](img/image-20220812005625814.png)
+
+Verify Node installtion
+
+```bash
+node -v
+```
 
