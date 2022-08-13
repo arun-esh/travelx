@@ -53,7 +53,6 @@ exports.signup = catchAsync(async (req, res, next) => {
 
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
-  
 
   // 1) Check if email and password are present
   if (!email || !password) {
@@ -63,10 +62,14 @@ exports.login = catchAsync(async (req, res, next) => {
 
   // 2) Check if user exists && password is correct
   const user = await User.findOne({ email }).select('+password');
-  const userName = user.name; // for logging purposes
 
+  let userName; // for logging purposes
+  if(user === null) {
+    console.log(`🔴 AuthController LOGIN: Non-existing email [${email.toLowerCase()}] is trying to login`);
+  }
+  
   if (!user || !(await user.correctPassword(password, user.password))) {
-    console.log(`🔴 AuthController Middleware LOGIN: User [${userName}] Invalid credentials`);
+    console.log(`🔴 AuthController Middleware LOGIN: User [] Invalid credentials`);
     return next(new AppError('Incorrect email or password!', 401));
   }
 

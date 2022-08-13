@@ -1,0 +1,486 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$pure-black: #000;
+$pure-white: #fff;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  
+}
+
+/* add floating box */
+.floating-box {
+  content: '';
+  position: sticky;
+  top: 10vh;
+  right: 10vh;
+  border-radius: 5px;
+  z-index: 1;
+  color: $pure-black
+  // color: black;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #77bd4c;
+
+  /* Because we want header to be sticky later */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  width: 14rem;
+  height: auto;
+}
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+  letter-spacing: 0.4rem;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: yellow;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: black;
+}
+
+.icon-mobile-nav[name='close-outline'] {
+  display: none;
+}
+
+/* FOOTER LOGO */
+.footer {
+  background-color: #77bd4c;
+  /* background-image: url(/img/logo_transparent.png);
+  width: 100%;
+  background-repeat:no-repeat;
+  background-position: center;
+  opacity: 10; */
+}
+
+.footer li {
+  list-style: none;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+.footer h3 {
+  text-underline-offset: 12rem;
+  display: inline-block;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: yellow;
+}
+
+.myfooter {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem;
+}
+
+.footer__links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  letter-spacing: 0.6rem;
+  font-weight: 500;
+}
+
+.main-detail-page {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin: 4rem;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* .detail-page-top-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+} */
+
+.detail-page-top-box {
+  display: flex;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: space-around;
+  align-items: center;
+  flex: 0 1 auto 
+
+}
+
+.detail-page-top-box-img img {
+  /* width: 60rem; */
+  min-width: 30rem;
+  height: auto;
+}
+
+.detail-page-product-name {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-weight: 500;
+  color: #333;
+  gap: 1.5rem;
+  justify-content: space-around;
+  align-items: left;
+}
+
+.product-list ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.product-featured-offers {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  justify-content: space-around;
+  align-items: left;
+}
+
+.product-list-offer {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #555 !important;
+  justify-content: left;
+}
+
+.feature-lists {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: black;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.feature-lists li {
+  margin-bottom: 3rem;
+}
+
+.feature-lists span {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.feature-lists li p {
+  margin-top: 1rem;
+  color: rgb(117, 112, 112);
+  font-size: 1.7rem;
+}
+
+.product-header-icons {
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 400;
+  color: red;
+  margin-right: 2rem;
+}
+
+.detail-page-product-name h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.detail-page-product-name p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.product-detail-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.3rem;
+}
+
+.product-detail-description {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+}
+
+.product-detail-description p {
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+/* Review  start */
+
+.main-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 40px 0px;
+}
+
+.title h2 {
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.title .underline {
+  width: 100px;
+  height: 4px;
+  background-color: #77bd4c;
+  margin: 0 auto;
+}
+
+/* Review  end */
+
+/* login form */
+
+.login-form {
+  margin: 0 auto;
+  max-width: 55rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+  padding: 5rem 7rem;
+  border-radius: 5px;
+}
+
+
+.form__input {
+  display: block;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: inherit;
+  padding: 1.25rem 1.75rem;
+  border: none;
+  width: 100%;
+  background-color: #fff;
+  background-color: #f2f2f2;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Pseudo element (a visible thing that isn't really in the DOM).
+      Also needs -ms- */
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 3px solid #55c57a;
+}
+/* .form__input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+} */
+.form__input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.form__label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.btn--green {
+  background-color: #77bd4c;
+  color: #fff;
+}
+
+
+.btn,
+.btn:link,
+.btn:visited {
+  font-size: 1.6rem;
+  padding: 1.4rem 3rem;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  font-weight: 400;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /*Add later when we use this for the button in form*/
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+  background-color: #2e864b;
+}
+
+.ma-bt-lg {
+  margin-bottom: 3.5rem !important;
+}
+
+/* .body-margin-top {
+  margin-top: 5rem;
+} */
+
+.body-padding {
+  padding: 5rem;
+}
+
+/* MAP */
+.section-map {
+  position: relative;
+  height: 45rem;
+  margin-top: calc(0px - var(--section-rotate));
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.marker {
+  background-image: url('../img/pin.png');
+  background-size: cover;
+  width: 32px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 25rem;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  padding: 1.5rem !important;
+  font-size: 1.4rem;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+}
+
+
