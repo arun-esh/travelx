@@ -54,11 +54,9 @@ exports.signup = catchAsync(async (req, res, next) => {
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
 
-  console.log(req.body);
-
   // 1) Check if email and password are present
   if (!email || !password) {
-    console.log(`🔴 AuthController LOGIN: Email or Pasword are not present`);
+    console.log(`🔴 AuthController LOGIN: Email or Password are not present`);
     return next(new AppError('Please provide email and password!', 400));
   }
 
