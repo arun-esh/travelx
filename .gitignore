@@ -108,4 +108,5 @@ dist
 config.env
 
 extra/
+data/
 
