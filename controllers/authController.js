@@ -56,14 +56,13 @@ exports.login = catchAsync(async (req, res, next) => {
 
   // 1) Check if email and password are present
   if (!email || !password) {
-    console.log(`🔴 AuthController LOGIN: Email or Pasword are not present`);
+    console.log(`🔴 AuthController LOGIN: Email or Password are not present`);
     return next(new AppError('Please provide email and password!', 400));
   }
 
   // 2) Check if user exists && password is correct
   const user = await User.findOne({ email }).select('+password');
 
-  let userName; // for logging purposes
   if(user === null) {
     console.log(`🔴 AuthController LOGIN: Non-existing email [${email.toLowerCase()}] is trying to login`);
   }

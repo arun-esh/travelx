@@ -44,7 +44,7 @@ exports.getOverview = catchAsync(async (req, res) => {
       bed_type: { $ne: null },
       security_deposit: { $ne:  null },
       cleaning_fee: { $ne:  null },
- 
+
       // conditionals 
       bathrooms: { $gte: 2, $lte: 5 },
       security_deposit: { $gte: 1, $lte: 200 },
