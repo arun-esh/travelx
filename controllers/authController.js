@@ -75,7 +75,7 @@ exports.login = catchAsync(async (req, res, next) => {
   // 3) If everything ok, send token to client
   createSendToken(user, 200, res);
   
-  console.log(`🟢 Authenticator Middleware LOGIN: 🡒\tUser ${userName} logged in successfully`);
+  console.log(`🟢 Authenticator Middleware LOGIN: 🡒\tUser ${email.toLowerCase()} logged in successfully`);
   // console.log(`🟢 AuthController LOGIN:  logged in`);
 });
 
