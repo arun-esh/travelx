@@ -3,7 +3,13 @@ const catchAsync = require(`./../utils/catchAsync`);
 
 exports.getOverview = catchAsync(async (req, res) => {
   // get the product from the database
-  const products = await Product.find();
+  const products = await Product.find({
+    bathrooms: { $gte: 2, $lte: 5 },
+    security_deposit: { $ne:  null },
+    security_deposit: { $gte: 1, $lte: 200 },
+    cleaning_fee: { $ne:  null },
+    cleaning_fee: { $gte: 0, $lte: 200 },
+    });
 
   res.render('overview', {
     title: 'All Products',
