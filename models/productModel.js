@@ -10,7 +10,7 @@ const productSchema = new mongoose.Schema(
       trim: true,
       required: true,
     },
-    slug: String,
+    // slug: String,
     summary: {
       type: String,
       trim: true,
@@ -234,19 +234,26 @@ const productSchema = new mongoose.Schema(
 // });
 
 // // DOCUMENT MIDDLEWARE: runs before .save() and .create()
-productSchema.pre('save', function (next) {
-  this.slug = slugify(this.name, { lower: true, trim: true });
-  next();
-});
+// productSchema.pre('save', function (next) {
+//   this.slug = slugify(this.name, { lower: true, trim: true });
+//   next();
+// });
 
-productSchema.pre('save', function (next) {
-  // short the name to max length 16 characters
-  if (this.name.length > 16) {
-    this.name = this.name.substring(0, 16);
-  }
-  next();
-});
+// productSchema.pre('save', function (next) {
+//   // short the name to max length 16 characters
+//   if (this.name.length > 16) {
+//     this.name = this.name.substring(0, 16);
+//   }
+//   next();
+// });
 
+// show only few random documents
+// productSchema.pre(/^find/, function (next) {
+//   this.find({ active: { $ne: false } });
+//   this.limit(16);
+//   this.skip(Math.floor(Math.random() * 6));
+//   next();
+// });
 
 
 
@@ -281,6 +288,8 @@ productSchema.pre('save', function (next) {
 //   console.log(this.pipeline());
 //   next();
 // });
+
+console.log(`🟢 🡒 \t productModel.js 🡒\tproductSchema `); 
 
 const Product = mongoose.model('product', productSchema);
 

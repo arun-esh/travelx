@@ -2,6 +2,10 @@ const path = require(`path`);
 const express = require(`express`);
 const morgan = require(`morgan`);
 const viewRouter = require(`./routes/viewsRoutes`);
+const globalErrorHandler = require(`./controllers/errorController`);
+const cookieParser = require(`cookie-parser`);
+const appError = require(`./utils/appError`);
+
 
 const app = express();
 app.set('view engine', 'pug');
@@ -10,11 +14,30 @@ app.set('views', path.join(__dirname, 'views'));
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.json());
-
 if (process.env.NODE_ENV === `development`) {
   app.use(morgan(`dev`));
 }
+
+app.use(express.json());
+
+
+app.use(cookieParser());
+
+app.use((req, res, next) => {
+  req.requestTime = new Date().toISOString();
+  // console.log(`Request Time: 🡒 \t  ${req.requestTime}`);
+  // console.log(`🟢 Request Headers:`);
+  // console.log(req.headers);
+  
+  // console.log(`🟢 Request Cookies:`);
+  // console.log(req.cookies);
+  next();
+});
+
+
+
+
+
 
 // Router
 
@@ -25,11 +48,39 @@ app.use('/', viewRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
 
-app.all(`*`, (req, res) => {
-  res.status(404).json({
-    status: `fail`,
-    message: `Page not found`,
-  });
+app.all('*', (req, res, next) => {
+  next(new appError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
+// Global error handler
+app.use(globalErrorHandler);
+
 module.exports = app;
+
+/* my emojis:
+⦿ 
+➔ 
+✅
+🟢
+🍏
+☘️
+🌿
+🔴
+🍎
+🟡
+🡒
+
+👋 
+👉 
+🫶 
+❤️ 
+♥️ 
+♡ 
+🔥 
+👈 
+🎉 
+🤷 
+🚀
+💥 
+🚩
+*/

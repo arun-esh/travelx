@@ -91,3 +91,26 @@ exports.deleteProduct = async (req, res) => {
     });
   }
 };
+
+// show only few random documents
+exports.getRandomProducts = async (req, res) => {
+  try {
+    const products = await Product.find({ active: { $ne: false } });
+    const randomProducts = [];
+    const randomProductsLength = Math.floor(Math.random() * 6);
+    for (let i = 0; i < randomProductsLength; i++) {
+      randomProducts.push(products[Math.floor(Math.random() * products.length)]);
+    }
+    res.status(200).json({
+      status: 'success',
+      data: {
+        products: randomProducts,
+      },
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: 'fail',
+      message: err,
+    });
+  }
+}
