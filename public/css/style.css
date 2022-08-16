@@ -488,5 +488,16 @@ hr {
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
 }
+/* thankyou page */
+.thankyou-page {
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+}
 
 
