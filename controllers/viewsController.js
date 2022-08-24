@@ -83,3 +83,9 @@ exports.getBillingPage = (req, res) => {
     title: 'Billing'
   });
 }
+
+exports.getPrivacy = catchAsync(async (req, res, next) => {
+  res.status(200).render('privacy', {
+    title: 'Privacy'
+  });
+});

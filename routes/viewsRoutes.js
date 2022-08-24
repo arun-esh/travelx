@@ -12,4 +12,6 @@ router.get('/login', viewsController.getLoginForm);
 router.get('/signup', viewsController.getSignUpForm);
 router.get('/billing', viewsController.getBillingPage);
 
+router.get('/privacy', viewsController.getPrivacy);
+
 module.exports = router;
