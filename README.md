@@ -18,6 +18,8 @@ University of Windsor
 
 <h3 align="center">
 🔴 We are still working on this project 🔴
+<hr>
+Pull Requests are welcome
 </h3> 
 
 <hr>
