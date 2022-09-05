@@ -90,11 +90,14 @@ node -v
 
 ## Backend
 
+### Datasource 
 
+For this project we use the data shared by [MongoDB](https://www.mongodb.com/docs/atlas/sample-data/sample-airbnb/). The data provided by MongoDB is a sample data from AirBnB's open source data ([link](http://insideairbnb.com/get-the-data/)).
 
 ### Database
 
 We used mongoDB as database for this project which is a non-relational database. Here is the schema for user collection. Used mostly `type: string`, but there are other types as well. Check out the schema for **products** which has variety of types for its fields. If there is a`Required` field that means we have to add this info, otherwise we will see the appropriate error notification.
+
 
 **Example**: In case,  `name:` is not provided, then it will alert the user to provide the name with `message:` `Please tell us your name!`
 
