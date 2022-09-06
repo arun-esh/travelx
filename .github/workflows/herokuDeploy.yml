@@ -29,8 +29,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      - name: Run start
-        run: npm start
+      # - name: Run start
+      #   run: npm start
         
   deploy:
       runs-on: ubuntu-latest
