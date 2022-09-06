@@ -105,7 +105,7 @@ dist
 
 # User specific preferences and files
 **/.DS_Store
-config.env
+# config.env
 
 data/
 extra/
