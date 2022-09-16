@@ -2,7 +2,7 @@
 
 ### What does the python script do?
 
-Currently the python script loads the JSON data and converts it to CSV format. The CSV format of data will be used for further processing.
+Currently, the python script loads the JSON data and converts it to CSV format. The CSV format of data will be used for further processing.
 
 ### Instructions to use the python file
 
@@ -10,7 +10,7 @@ To run the Python file - airbnb5000.json file needs to be present in the ml fold
 
 ### Requirements 
 
-Currently we are using pandas package from python. Pandas can be installed by running following command in terminal - 
+Currently, we are using pandas package from python. Pandas can be installed by running following command in terminal - 
 
 ```pip install pandas```
 
