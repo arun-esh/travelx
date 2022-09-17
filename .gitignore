@@ -110,8 +110,4 @@ dist
 data/
 extra/
 
-ml/airbnb5000.json
-ml/data.csv
-
 .idea/
-/ml/products.csv
