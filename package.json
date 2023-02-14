@@ -5,10 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "node server.js",
-    "start:prod": "NODE_ENV=production node server.js",
-    "compile": "sass sass/main.scss public/css/main.css -w",
-    "building": "netlify deploy --prod"
+    "build": "node server.js",
+    "compile": "sass sass/main.scss public/css/main.css -w"
   },
   "repository": {
     "type": "git",
