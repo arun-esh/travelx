@@ -1,5 +1,6 @@
 const path = require(`path`);
 const express = require(`express`);
+const serverless = require('serverless-http');
 const morgan = require(`morgan`);
 const viewRouter = require(`./routes/viewsRoutes`);
 const globalErrorHandler = require(`./controllers/errorController`);
