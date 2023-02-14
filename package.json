@@ -9,7 +9,7 @@
     "start:prod": "NODE_ENV=production node server.js",
     "compile": "sass sass/main.scss public/css/main.css -w",
     "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
+    "build": "netlify deploy --prod"
   },
   "repository": {
     "type": "git",
