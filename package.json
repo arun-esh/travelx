@@ -4,12 +4,11 @@
   "description": "Group Project",
   "main": "server.js",
   "scripts": {
-    "starting": "node server.js",
+    "start": "node server.js",
     "start:dev": "node server.js",
     "start:prod": "NODE_ENV=production node server.js",
     "compile": "sass sass/main.scss public/css/main.css -w",
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "netlify deploy --prod"
+    "building": "netlify deploy --prod"
   },
   "repository": {
     "type": "git",

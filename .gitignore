@@ -111,3 +111,6 @@ extra/
 
 ml/airbnb5000.json
 ml/data.csv
+
+# Local Netlify folder
+.netlify

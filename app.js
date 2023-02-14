@@ -45,8 +45,7 @@ app.use((req, res, next) => {
 const productRouter = require(`./routes/productRoutes`);
 const userRouter = require(`./routes/userRoutes`);
 
-app.use('/.netlify/functions/server', viewRouter);
-// app.use('/', viewRouter);
+app.use('/', viewRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
 
@@ -57,7 +56,7 @@ app.all('*', (req, res, next) => {
 // Global error handler
 app.use(globalErrorHandler);
 
-module.exports.handler = serverless(app);
+module.exports = app;
 
 /* my emojis:
 ⦿ 
