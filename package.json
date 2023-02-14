@@ -4,10 +4,12 @@
   "description": "Group Project",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "start:dev": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js",
-    "compile": "sass sass/main.scss public/css/main.css -w"
+    "starting": "node server.js",
+    "start:dev": "node server.js",
+    "start:prod": "NODE_ENV=production node server.js",
+    "compile": "sass sass/main.scss public/css/main.css -w",
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
     "pug": "^3.0.2",
     "sass": "^1.54.4",
     "slugify": "^1.6.5",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0",
+    "netlify-lambda": "^1.4.3"
   }
 }
