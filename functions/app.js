@@ -57,7 +57,7 @@ app.all('*', (req, res, next) => {
 // Global error handler
 app.use(globalErrorHandler);
 
-module.exports = app;
+module.exports.handler = serverless(app);
 
 /* my emojis:
 ⦿ 
