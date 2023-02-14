@@ -37,6 +37,7 @@
     "sass": "^1.54.4",
     "slugify": "^1.6.5",
     "validator": "^13.7.0",
-    "netlify-lambda": "^1.4.3"
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^2.11.0"
   }
 }
