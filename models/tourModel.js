@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const slugify = require('slugify');
 const validator = require('validator');
 
-const productSchema = new mongoose.Schema(
+const tourSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -289,8 +289,8 @@ const productSchema = new mongoose.Schema(
 //   next();
 // });
 
-console.log(`🟢 🡒 \t productModel.js 🡒\tproductSchema `); 
+console.log(`🟢 \t tourModel.js 🡒\ttourSchema `); 
 
-const Product = mongoose.model('product', productSchema);
+const Tour = mongoose.model('Tour', tourSchema);
 
-module.exports = Product;
+module.exports = Tour;

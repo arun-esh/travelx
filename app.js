@@ -7,6 +7,9 @@ const globalErrorHandler = require(`./controllers/errorController`);
 const cookieParser = require(`cookie-parser`);
 const appError = require(`./utils/appError`);
 
+// const bodyParser = require("body-parser")
+
+// app.use(bodyParser.urlencoded({ extended: true }));
 
 const app = express();
 app.set('view engine', 'pug');

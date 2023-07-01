@@ -114,3 +114,6 @@ ml/data.csv
 
 # Local Netlify folder
 .netlify
+
+
+config.env
