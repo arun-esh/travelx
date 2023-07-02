@@ -289,7 +289,6 @@ const productSchema = new mongoose.Schema(
 //   next();
 // });
 
-console.log(`🟢 🡒 \t productModel.js 🡒\tproductSchema `); 
 
 const Product = mongoose.model('product', productSchema);
 

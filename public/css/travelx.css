@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2';
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+
+
+/* ADD TO CART - START */
+
+.add-to-cart {
+    background: black;
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid black;
+    color: white;
+}
+
+
+.add-to-cart span {
+    color: yellow;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ADD TO CART - END */
+
+.card__container_item_description h3 {
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-top: 1.5rem;
+    color: black;
+    /* uppercase */
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+
+.card__container_item {
+    display: flex;
+    min-width: 350px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 0.5rem;
+    flex-wrap: nowrap;
+    background-color: white;
+    margin-bottom: 1.5rem;
+}
+
+.card_info_item {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: black;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+
+}
