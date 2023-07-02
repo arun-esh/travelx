@@ -1,7 +1,7 @@
 name: Bug report
 description: File a bug report
-title: "Bug: "
-labels: ["bug", "triage"]
+title: 'Bug: '
+labels: ['bug', 'triage']
 assignees:
   - octocat
 body:
@@ -32,7 +32,7 @@ body:
       description: What is the behaviour that you would expect to see?
       placeholder: A clear and concise description of what you expected to happen.
     validations:
-      required: true
+      required: false
   - type: input
     id: contact
     attributes:
