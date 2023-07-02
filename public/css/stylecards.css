@@ -1,5 +1,3 @@
-
-
 body {
   background-color: hwb(0deg 98% 5%);
   color: #555555;
@@ -18,7 +16,7 @@ body {
   margin: 0 auto;
 }
 
-.card_title{
+.card_title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,15 +43,15 @@ body {
 }
 
 
-.card__container_item:hover{
+.card__container_item:hover {
   background-color: #77bd4c;
 }
 
 /* nested class add-to-cart */
 .card__container_item .card__container_item_add-to-cart:hover {
-  
+
   background-color: #c9cbc7;
- 
+
 }
 
 .card__container {
@@ -79,9 +77,9 @@ body {
   margin-top: 1.5rem;
   color: black;
   /* uppercase */
-  /* text-transform: uppercase; */
-  /* font-size: 1.5rem; */
-  /* letter-spacing: 0.1rem; */
+/* text-transform: uppercase; */
+/* font-size: 1.5rem; */
+/* letter-spacing: 0.1rem; */
 /* }  */
 /* image size to box */
 
@@ -96,6 +94,7 @@ img {
   width: 5%;
 } */
 
+
 /* CARD FOOTER */
 
 .card-footer {
@@ -104,6 +103,7 @@ img {
   flex-direction: column;
   width: 100%;
 }
+
 .stat {
   box-sizing: border-box;
   width: calc(100% / 3);
@@ -119,7 +119,7 @@ img {
   font-weight: 300;
   font-size: 11px;
   letter-spacing: 1px;
-  color:black;
+  color: black;
 }
 
 .stat .value {
@@ -145,6 +145,3 @@ img {
 .stat:first-child {
   border-left: 1px solid black;
 }
-
-
-

@@ -21,19 +21,16 @@ body {
 
 .add-to-cart {
     background: black;
-    padding: .5rem;
+    text-align: center;
+    padding: 1rem 2rem;
     border-radius: 5px;
-    margin-top: 10px;
-    border: 1px solid black;
-    color: white;
 }
 
 
 .add-to-cart span {
     color: yellow;
     text-transform: uppercase;
-    letter-spacing: .1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -59,9 +56,9 @@ body {
     display: flex;
     min-width: 350px;
     width: 300px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     flex-wrap: nowrap;
     background-color: white;
     margin-bottom: 1.5rem;
