@@ -34,14 +34,6 @@ body:
     validations:
       required: true
   - type: input
-    id: version
-    attributes:
-      label: SurrealDB version
-      description: Copy and paste the output of `surreal version`
-      placeholder: surreal 0.0.0 for macOS on aarch64
-    validations:
-      required: true
-  - type: input
     id: contact
     attributes:
       label: Contact Details
@@ -49,19 +41,3 @@ body:
       placeholder: email@example.com
     validations:
       required: false
-  - type: checkboxes
-    id: check
-    attributes:
-      label: Is there an existing issue for this?
-      description: Please search [our issues](https://github.com/surrealdb/surrealdb/issues) to see if this bug already exists.
-      options:
-      - label: I have searched the existing issues
-        required: true
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/surrealdb/surrealdb)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true

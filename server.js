@@ -4,18 +4,11 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 const app = require('./app');
 
-console.log(process.env.DATABASE);
-
-const DB = process.env.DATABASE.replace(
-  '<PASSWORD>',
-  process.env.DATABASE_PASSWORD
-);
+const DB = process.env.DATABASE;
 
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
-    // useCreateIndex: true, // deprecated in mongoose v4
-    // useFindAndModify: false, // deprecated  more info: https://mongoosejs.com/docs/deprecations.html
     useUnifiedTopology: true
   })
   .then(() => console.log('DB connection successful!'));
