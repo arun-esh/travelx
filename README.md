@@ -8,14 +8,6 @@ Travelx
 Web Development Project
 </h2>
 
-<hr>
-
-<h3 align="center">
-🔴 Accepting Pull Requests 🔴
-</h3>
-
-<hr>
-
 The project is the part of the University of Windsor courseware (COMP-3340) which relates to basics of the web development. As the part of course, we learn HTML, CSS, javascript, Server Side PHP, NodeJs, Databases, etc.
 
 Click on the link to check the [Requirements](https://github.com/arun-esh/comp3340Project/blob/main/requirements.md)
